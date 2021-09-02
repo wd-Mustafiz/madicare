@@ -1,0 +1,835 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  clear: both;
+}
+html {
+  scroll-behavior: smooth;
+}
+li {
+  list-style-type: none;
+}
+.card-sem-title {
+  font-family: Barlow Condensed;
+  font-size: 16px;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+.card-headng {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: Montserrat;
+  margin-bottom: 8px;
+}
+.card-pera {
+  font-family: barlow;
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+.fndBtn {
+  padding: 13px 26px;
+  font-family: barlow;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 50px;
+  font-weight: bold;
+}
+/*
+font-family: 'Barlow', sans-serif;
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+.start-header {
+  opacity: 1;
+  transform: translateY(0);
+  padding: 20px 0;
+  box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.start-header.scroll-on {
+  box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+  padding: 10px 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.start-header.scroll-on .navbar-brand img {
+  height: 24px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.navigation-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.navbar {
+  padding: 0;
+}
+.navbar-brand img {
+  height: 28px;
+  width: auto;
+  display: block;
+
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.navbar-toggler {
+  float: right;
+  border: none;
+  padding-right: 0;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  outline: none;
+}
+.navbar-light .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 1px solid #000;
+  transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after,
+.navbar-light .navbar-toggler-icon:before {
+  width: 24px;
+  position: absolute;
+  height: 1px;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 2;
+  transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after {
+  top: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent;
+}
+.nav-link {
+  color: #212121 !important;
+  font-weight: 500;
+  transition: all 200ms linear;
+}
+.nav-item:hover .nav-link {
+  color: #8167a9 !important;
+}
+.nav-item.active .nav-link {
+  color: #777 !important;
+}
+.nav-link {
+  position: relative;
+  padding: 5px 0 !important;
+  display: inline-block;
+}
+.nav-item:after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: #8167a9;
+  opacity: 0;
+  transition: all 200ms linear;
+}
+.nav-item:hover:after {
+  bottom: 0;
+  opacity: 1;
+}
+.nav-item.active:hover:after {
+  opacity: 0;
+}
+.nav-item {
+  position: relative;
+  transition: all 200ms linear;
+}
+
+.port {
+  padding: 10px 15px 0 15px;
+  max-width: 1160px;
+}
+.team-port {
+  width: 70%;
+  float: right;
+}
+.socal-navbar .nav-link {
+  color: #525a89 !important;
+}
+/***hero - banner ***/
+.carousel {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+}
+.carousel img {
+  width: 100%;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: rgba(0, 0, 0, 0.13);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.4s;
+}
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  background-color: #525a89;
+}
+.carousel-control-prev {
+  height: 100px;
+  width: 50px;
+}
+.carousel-control-next {
+  height: 100px;
+  width: 50px;
+  right: 0;
+}
+
+.carousel-item {
+  display: none !important;
+}
+.carousel .active {
+  display: block !important;
+}
+.carousel-indicators li {
+  border-radius: 50%;
+  background: #525a89;
+  height: 0;
+  width: 20px;
+  margin: 20px 20px;
+}
+.carousel-caption {
+  position: absolute;
+  top: 18%;
+  left: 14%;
+  text-align: left;
+  animation-duration: 2s;
+}
+.sem-headng {
+  font-family: Barlow Condensed;
+  font-size: 1.56rem;
+  color: #444444;
+  margin: 0 0 16px;
+}
+
+.dash {
+  width: 60px;
+  height: 2px;
+  margin: 0 0 12px;
+  background: #525a89;
+}
+.headng,
+.normal-headng {
+  font-weight: 800;
+  color: #525a89;
+  font-family: Montserrat;
+  font-size: 70px;
+}
+.normal-headng {
+  color: #222222;
+  font-weight: 300;
+}
+.head-pera {
+  font-size: 20px;
+  font-family: Barlow;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  color: #444444;
+  width: 652px;
+}
+.dcoverBtn,
+.vwBtn {
+  padding: 15px 30px;
+  margin: 0 15px 0 0;
+  width: 165px;
+  height: 47px;
+  font-size: 14px;
+  font-family: Barlow;
+  border-radius: 50px;
+  font-weight: bold;
+  line-height: 1;
+}
+.vwBtn {
+  width: 190px;
+}
+
+/******survics *********/
+.survics {
+  margin-top: 30px;
+}
+.survics .card {
+  border: none;
+  color: white;
+  border-radius: 0px;
+  height: 530px;
+}
+
+.survics .dash {
+  height: 1.6px;
+
+  background: #000;
+}
+.survics-1 {
+  background: #eb1d35;
+}
+.survics-2 {
+  background: #525a89;
+}
+.survics-3 {
+  background: rgba(209, 11, 34, 1);
+}
+.survics-4 {
+  background: #282828;
+}
+.sub-survics {
+  margin-bottom: 19px;
+}
+.sub-survics:last-child {
+  margin-bottom: 0;
+}
+.des-head {
+  font-size: 14px;
+  font-family: Montserrat;
+}
+.des {
+  font-size: 13px;
+  font-family: barlow;
+}
+.sur-icon i {
+  font-size: 42px;
+}
+.sur-icon i:hover {
+  color: #525a89;
+}
+
+/***** team secton *******/
+.team {
+  height: 1050px;
+  width: 100%;
+  padding: 160px 160px;
+
+  background: url("http://medicare.bold-themes.com/cardiology/wp-content/uploads/sites/10/2018/01/bgn-team-members.jpg")
+    no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.team-text {
+  width: 95%;
+}
+.head-pera {
+  width: 80%;
+}
+.team-logo,
+.dr-icon {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 4px solid #525a89;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #525a89;
+  transition: 0.6s;
+}
+.team-logo:hover {
+  border: 60px solid #525a89;
+  color: white;
+}
+.team-member {
+  margin-top: -70px;
+}
+.team-member .card {
+  height: 605px;
+  background-color: #f1f1f1;
+  color: black;
+}
+.team-img-div {
+  position: relative;
+
+  height: 255px;
+  width: 100%;
+}
+.parson-1 {
+  background: url("http://medicare.bold-themes.com/cardiology/wp-content/uploads/sites/10/2018/01/img-team-member-01.jpg");
+  background-size: cover;
+}
+.parson-2 {
+  background: url("http://medicare.bold-themes.com/cardiology/wp-content/uploads/sites/10/2018/01/img-team-member-02.jpg");
+  background-size: cover;
+}
+.parson-3 {
+  background: url("http://medicare.bold-themes.com/cardiology/wp-content/uploads/sites/10/2018/01/img-team-member-03.jpg");
+  background-size: cover;
+}
+.parson-4 {
+  background: url("http://medicare.bold-themes.com/cardiology/wp-content/uploads/sites/10/2018/01/img-team-member-04.jpg");
+  background-size: cover;
+}
+.dr-icon {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  bottom: -14%;
+  left: 50%;
+  transform: translatex(-50%);
+  border: 40px solid #525a89;
+  color: white;
+}
+.dr-icon:hover {
+  border: 2px solid #525a89;
+  background: white;
+  color: #525a89;
+}
+
+/**********about *********/
+.about-us {
+  padding: 160px 0;
+}
+.about-small-text {
+  border: 10px solid #f1f1f1;
+
+  padding: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.about-small-text .sem-headng {
+  font-size: 16px;
+}
+.about-small-text .headng {
+  font-size: 25px;
+}
+.about-small-text .head-pera {
+  font-size: 13px;
+}
+.about-small-text .dash {
+  height: 1px;
+}
+
+.accorbtn {
+  border: none;
+  font-size: 16px;
+  font-family: Montserrat;
+  width: 100%;
+  border-radius: 50px !important;
+  background: #f1f1f1;
+  padding: 8px;
+  transition: 0.4s;
+}
+
+.accorbtn:focus {
+  outline: none !important;
+  border: 2px solid #525a89 !important;
+}
+.fa-angle-down {
+  transition: 0.4s;
+}
+
+.accorbtn:focus .fa-angle-down {
+  transform: rotate(180deg);
+}
+
+.opareton {
+  margin-top: 80px;
+}
+.oparaton-sngle-part {
+  border-right: 2px solid #f1f1f1;
+}
+.oparaton-sngle-part:last-child {
+  border: none;
+}
+.oparaton-sngle-part i {
+  color: #525a89;
+  transition: 0.4s;
+}
+.oparaton-sngle-part i:hover {
+  color: black;
+}
+.testomonal {
+  background-color: #525a89;
+  background-image: url(http://medicare.bold-themes.com/cardiology/wp-content/uploads/sites/10/2018/01/bgn-testimonials.jpg);
+  background-size: cover;
+  color: white;
+  padding: 160px 80px;
+  position: relative;
+}
+.test-img-div {
+  margin-top: 80px;
+  position: relative;
+}
+.test-icon,
+.madcare-plus {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translatex(-50%);
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  border: 21px solid #000;
+  transition: 0.4s;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.madcare-plus {
+  position: absolute;
+  top: -7%;
+  left: 10%;
+  transform: translatex(0);
+  border: 21px solid #525a89;
+  color: white;
+}
+.madcare-plus:hover {
+  border: 1px solid #525a89;
+  background-color: #fff;
+  color: #525a89;
+}
+.test-icon:hover {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+.testBtn {
+  background: #282828;
+  padding: 13px 26px;
+  margin: 0 16px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 12px;
+  font-family: barlow;
+  font-weight: bold;
+  transition: 0.5s;
+  position: absolute;
+  top: -2%;
+  left: 45%;
+}
+.medcareBtn {
+  background: #282828;
+  padding: 13px 26px;
+  margin: 0 16px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 12px;
+  font-family: barlow;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.testBtn:hover {
+  background: black;
+}
+.testBtn:focus {
+  border: none;
+  outline: none;
+}
+
+.test-card .card {
+  background: none;
+  border: none;
+}
+
+.test-img-div img {
+  border-radius: 50%;
+}
+
+.madcare {
+  padding: 160px 0 0 0;
+}
+.madcare-img-div {
+  position: relative;
+  overflow: hidden;
+}
+.hover-div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: red;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.madcare-img-div:hover .hover-div {
+  top: 0;
+}
+.good-news-input {
+  background-color: rgba(0, 0, 0, 0.07);
+  padding: 0 20px;
+  height: 44px;
+  width: 100%;
+  display: block;
+  font-family: Montserrat;
+  font-size: 15px;
+  line-height: initial;
+  font-weight: 300;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px transparent inset;
+  box-shadow: 0 0 0 2px transparent inset;
+  -webkit-appearance: none;
+  border-radius: 50px;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.good-news {
+  padding: 160px 0;
+  background: url("http://medicare.bold-themes.com/cardiology/wp-content/uploads/sites/10/2018/01/bgn-newsletter-subscribe.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.good-news-input:focus {
+  border: 3px solid #525a89;
+}
+.goodBtn {
+  outline: none;
+  padding: 14px 28px;
+  background: #525a89;
+}
+.goodBtn:hover {
+  background: #ca0920;
+}
+.google-map {
+  position: relative;
+}
+.google-map .fas {
+  color: #525a89;
+  transition: 0.4s;
+}
+.google-map .fas:hover {
+  color: white;
+}
+
+.google-map-work-zone {
+  position: absolute;
+
+  top: 0;
+  left: 12.5%;
+  transition: 0.4s;
+}
+
+.left-position {
+  left: -40%;
+}
+#hideBtn {
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+.for-justify {
+  justify-content: flex-end;
+}
+
+footer {
+  background-color: #525a89;
+}
+footer a {
+  color: white;
+  text-decoration: none !important;
+}
+.footer-cop {
+  margin-top: -50px;
+}
+.footer-emargency {
+  margin: 30px;
+  padding: 20px 0;
+  border-top: 0.2px solid #bebebe;
+}
+.number-text {
+  font-size: 40px;
+  font-family: montserrat;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .fas {
+  color: white;
+  font-weight: bold;
+}
+footer .fas:hover {
+  color: black;
+}
+footer .des-head {
+  font-size: 16px;
+  font-family: montserrat;
+  color: white;
+  font-weight: bold;
+}
+footer .des {
+  color: white;
+  font-family: barlow;
+  font-size: 13px;
+}
+/*******************try**************************************************************/
+@media (max-width: 1250px) {
+  .carousel {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 1100px) {
+  .carousel-caption {
+    top: 8%;
+  }
+  .carousel {
+    height: 77vh;
+  }
+  .team-port {
+    width: 100%;
+    float: none;
+  }
+  .team {
+    height: 1050px;
+    width: 100%;
+    padding: 160px 60px;
+  }
+  .team-port {
+    width: 100%;
+  }
+  .head-pera {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-caption {
+    top: 5%;
+  }
+  .carousel {
+    height: 60vh;
+  }
+  .headng,
+  .normal-headng {
+    font-size: 50px;
+  }
+  .head-pera {
+    font-size: 16px;
+  }
+  .footer-cop {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .for-justify {
+    justify-content: center;
+  }
+}
+@media (max-width: 788px) {
+  .sem-headng {
+    font-size: 18px;
+  }
+  .headng,
+  .normal-headng {
+    font-size: 40px;
+  }
+  .carousel {
+    height: 55vh;
+  }
+  .head-pera {
+    font-size: 16px;
+  }
+  .dcoverBtn,
+  .vwBtn {
+    padding: 8px 30px;
+
+    height: 30px;
+    font-size: 12px;
+  }
+  .survics .card {
+    height: 640px;
+    margin: 20px 0;
+  }
+  .survics .card:last-child {
+    height: 690px;
+  }
+  .goodBtn {
+    margin-top: 20px;
+
+    width: 80% !important;
+  }
+  #hideBtn {
+    display: block;
+  }
+  .footer-cop {
+    width: 95% !important;
+    margin-left: 45px;
+  }
+}
+@media (max-width: 680px) {
+  .sem-headng {
+    font-size: 15px;
+  }
+  .headng,
+  .normal-headng {
+    font-size: 20px;
+  }
+  .head-pera {
+    font-size: 14px;
+    width: 500px;
+  }
+  .team-port {
+    width: 100%;
+  }
+  .left-position {
+    left: -48%;
+  }
+}
+
+@media (max-width: 548px) {
+  .carousel-inner {
+    height: 450px;
+  }
+  .carousel-inner img {
+    height: 450px !important;
+  }
+  .sem-headng {
+    font-size: 25px;
+  }
+  .headng,
+  .normal-headng {
+    font-size: 20px;
+  }
+  .head-pera {
+    font-size: 18px;
+    width: 400px;
+  }
+  .vwBtn {
+    margin-top: 10px;
+  }
+  .left-position {
+    left: -58%;
+  }
+}
